@@ -37,7 +37,7 @@ for (let i = 0; i < keys.length; i++) {
     } else {
       if (displayText != "") {
         numArr.push(Number(displayText));
-        console.log(`Pushing: ${displayText}`); 
+        // console.log(`Pushing: ${displayText}`); 
       }
       
       
@@ -51,7 +51,7 @@ for (let i = 0; i < keys.length; i++) {
 
 // Reset Calculation
 reset.addEventListener("click", ()=> {
-  console.log("----RESET----");
+  // console.log("----RESET----");
   numArr = [];
   operatorArr = [];
   tempResult = 0;
@@ -75,17 +75,17 @@ del.addEventListener("click",()=>{
 
 // Calculate
 result.addEventListener("click",()=>{
-  console.log(displayText);
+  // console.log(displayText);
   numArr.push(Number(displayText));
-  console.log(`Pushing: ${displayText}`);    
+  // console.log(`Pushing: ${displayText}`);    
 
   for (let i = 0; i < numArr.length; i++) {
-    console.log(`Calculating: ${tempResult}, Calculation: ${operatorArr[0]}`);
+    // console.log(`Calculating: ${tempResult}, Calculation: ${operatorArr[0]}`);
     if (operatorArr[0] === "+") {
       tempResult += numArr[i];
       firstInput = false;
     } else if (operatorArr[0] === "-") {
-      console.log(tempResult);
+      // console.log(tempResult);
       if (firstInput) {
         tempResult += numArr[i];
         firstInput = false;
@@ -136,7 +136,7 @@ calArea.addEventListener("click",(e)=>{
   if (!isButton) {
     return;
   }
-  console.log(`numArr: ${numArr}, operatorArr: ${operatorArr}, tempResult: ${tempResult}`);
+  //console.log(`numArr: ${numArr}, operatorArr: ${operatorArr}, tempResult: ${tempResult}`);
   document.getElementById("audio").play();
   document.getElementById("audio").currentTime=0;
 
