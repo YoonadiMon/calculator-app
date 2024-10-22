@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import "colors";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.theme1 {
+  background-color: $main-background-1;
+  color: $text2-1;
+  .attribution a { 
+    color: $text2-1;
+    &:hover {
+      color: $key-background1-1;
+    }
+  }
+  nav {
+    input {
+      background-color: $keypad-background-1;
+      &::-moz-range-thumb, &::-webkit-slider-thumb
+          {
+            background: $key-background2-1;
+          }
+    }
+  }
+  #display-area {
+    background-color: $screen-background-1;
+  }
+  #cal-area {
+    background-color: $keypad-background-1;
+    &>button {
+      background-color: $key-background3-1;
+      box-shadow: 0px 2px $key-shadow3-1;
+    }
+    &>* {
+      color: $text1-1;
+    }
+    .colorBtn, #result {
+      color: $text2-1;
+    }
+    .colorBtn {
+      background-color: $key-background1-1;
+      box-shadow: 0px 2px $key-shadow1-1;
+    }
+    #result {
+      background-color: $key-background2-1;
+      box-shadow: 0px 2px $key-shadow2-1;
+    }
+  }
+}
+
+.theme2 {
+  background-color: $main-background-2;
+  color: $text1-2;
+  .attribution a { 
+    color: $text1-2;
+    &:hover {
+      color: $key-background2-2;
+    }
+  }
+  nav {
+    input {
+      background-color: $keypad-background-2;
+      &::-moz-range-thumb, &::-webkit-slider-thumb
+          {
+            background: $key-background2-2;
+          }
+    }
+  }
+  #display-area {
+    background-color: $screen-background-2;
+  }
+  #cal-area {
+    background-color: $keypad-background-2;
+    &>button {
+      background-color: $key-background3-2;
+      box-shadow: 0px 2px $key-shadow3-2;
+    }
+    &>* {
+      color: $text1-2;
+    }
+    .colorBtn, #result {
+      color: $text2-2;
+    }
+    .colorBtn {
+      background-color: $key-background1-2;
+      box-shadow: 0px 2px $key-shadow1-2;
+    }
+    #result {
+      background-color: $key-background2-2;
+      box-shadow: 0px 2px $key-shadow2-2;
+    }
+  }
+}
+
+.theme3 {
+  background-color: $main-background-3;
+  color: $text1-3;
+  .attribution a { 
+    color: $text1-3;
+    &:hover {
+      color: $text3-3;
+    }
+  }
+  nav {
+    input {
+      background-color: $keypad-background-3;
+      &::-moz-range-thumb, &::-webkit-slider-thumb
+          {
+            background: $key-background2-3;
+          }
+    }
+  }
+  #display-area {
+    background-color: $keypad-background-3;
+  }
+  #cal-area {
+    background-color: $keypad-background-3;
+    &>button {
+      background-color: $key-background3-3;
+      box-shadow: 0px 2px $key-shadow3-3;
+    }
+    &>* {
+      color: $text1-3;
+    }
+    .colorBtn {
+      color: $text3-3;
+    }
+    #result {
+      color: $text2-3;
+    }
+    .colorBtn {
+      background-color: $key-background1-3;
+      box-shadow: 0px 2px $key-shadow1-3;
+    }
+    #result {
+      background-color: $key-background2-3;
+      box-shadow: 0px 2px $key-shadow2-3;
+    }
+  }
+}
+
+#main {
+  min-width: 500px;
+  max-width: 60vw;
+  margin-top: 10vh;
+  &>* {
+    margin-bottom: 0.4rem;
+    border-radius: 0.2rem;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    #title {
+      font-size: 0.8rem;
+    }
+    #themes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+      .themes-txt {
+        font-size: 0.4rem;
+        line-height: 0.3rem;
+      }
+
+      #themes-select {
+        margin-left: 0.2rem;
+        display: grid;
+        input, #themes-txt-area {
+          width: 1.4rem;
+        }
+        #themes-txt-area {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 4px;
+        }
+        input {
+          -webkit-appearance: none;
+          height: 0.5rem;
+          border-radius: 0.35rem;
+          cursor: pointer;
+          padding: 8px 2px;
+          &::-moz-range-thumb, &::-webkit-slider-thumb
+          {
+            border: none;
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+
+  }
+  #display-area {
+    text-align: right;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+  #cal-area {
+    padding: 0.8rem;
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: repeat(4, 1fr);
+    .buttons {
+      cursor: pointer;
+      border: none;
+      border-radius: 0.2rem;
+      
+    }
+    .colorBtn {
+      font-size: 0.6rem;
+    }
+    #reset {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    #result {
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+  }
+}
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { font-size: 11px;}
+
+
+
+

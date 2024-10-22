@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.theme1 {
+  background-color: hsl(222, 26%, 31%);
+  color: hsl(0, 0%, 100%);
+}
+.theme1 .attribution a {
+  color: hsl(0, 0%, 100%);
+}
+.theme1 .attribution a:hover {
+  color: hsl(224, 51%, 76%);
+}
+.theme1 nav input {
+  background-color: hsl(223, 31%, 20%);
+}
+.theme1 nav input::-moz-range-thumb, .theme1 nav input::-webkit-slider-thumb {
+  background: hsl(6, 63%, 50%);
+}
+.theme1 #display-area {
+  background-color: hsl(224, 36%, 15%);
+}
+.theme1 #cal-area {
+  background-color: hsl(223, 31%, 20%);
+}
+.theme1 #cal-area > button {
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: 0px 2px hsl(28, 16%, 65%);
+}
+.theme1 #cal-area > * {
+  color: hsl(221, 14%, 31%);
+}
+.theme1 #cal-area .colorBtn, .theme1 #cal-area #result {
+  color: hsl(0, 0%, 100%);
+}
+.theme1 #cal-area .colorBtn {
+  background-color: hsl(224, 51%, 76%);
+  box-shadow: 0px 2px hsl(224, 28%, 35%);
+}
+.theme1 #cal-area #result {
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 0px 2px hsl(6, 70%, 34%);
+}
+
+.theme2 {
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(60, 10%, 19%);
+}
+.theme2 .attribution a {
+  color: hsl(60, 10%, 19%);
+}
+.theme2 .attribution a:hover {
+  color: hsl(25, 98%, 40%);
+}
+.theme2 nav input {
+  background-color: hsl(0, 5%, 81%);
+}
+.theme2 nav input::-moz-range-thumb, .theme2 nav input::-webkit-slider-thumb {
+  background: hsl(25, 98%, 40%);
+}
+.theme2 #display-area {
+  background-color: hsl(0, 0%, 93%);
+}
+.theme2 #cal-area {
+  background-color: hsl(0, 5%, 81%);
+}
+.theme2 #cal-area > button {
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: 0px 2px hsl(35, 11%, 61%);
+}
+.theme2 #cal-area > * {
+  color: hsl(60, 10%, 19%);
+}
+.theme2 #cal-area .colorBtn, .theme2 #cal-area #result {
+  color: hsl(0, 0%, 100%);
+}
+.theme2 #cal-area .colorBtn {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0px 2px hsl(185, 58%, 25%);
+}
+.theme2 #cal-area #result {
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0px 2px hsl(25, 99%, 27%);
+}
+
+.theme3 {
+  background-color: hsl(268, 75%, 9%);
+  color: hsl(52, 100%, 62%);
+}
+.theme3 .attribution a {
+  color: hsl(52, 100%, 62%);
+}
+.theme3 .attribution a:hover {
+  color: hsl(0, 0%, 100%);
+}
+.theme3 nav input {
+  background-color: hsl(268, 71%, 12%);
+}
+.theme3 nav input::-moz-range-thumb, .theme3 nav input::-webkit-slider-thumb {
+  background: hsl(176, 100%, 44%);
+}
+.theme3 #display-area {
+  background-color: hsl(268, 71%, 12%);
+}
+.theme3 #cal-area {
+  background-color: hsl(268, 71%, 12%);
+}
+.theme3 #cal-area > button {
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0px 2px hsl(290, 70%, 36%);
+}
+.theme3 #cal-area > * {
+  color: hsl(52, 100%, 62%);
+}
+.theme3 #cal-area .colorBtn {
+  color: hsl(0, 0%, 100%);
+}
+.theme3 #cal-area #result {
+  color: hsl(198, 20%, 13%);
+}
+.theme3 #cal-area .colorBtn {
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0px 2px hsl(285, 91%, 52%);
+}
+.theme3 #cal-area #result {
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: 0px 2px hsl(177, 92%, 70%);
+}
+
+#main {
+  min-width: 500px;
+  max-width: 60vw;
+  margin-top: 10vh;
+}
+#main > * {
+  margin-bottom: 0.4rem;
+  border-radius: 0.2rem;
+}
+#main nav {
+  display: flex;
+  justify-content: space-between;
+}
+#main nav #title {
+  font-size: 0.8rem;
+}
+#main nav #themes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+}
+#main nav #themes .themes-txt {
+  font-size: 0.4rem;
+  line-height: 0.3rem;
+}
+#main nav #themes #themes-select {
+  margin-left: 0.2rem;
+  display: grid;
+}
+#main nav #themes #themes-select input, #main nav #themes #themes-select #themes-txt-area {
+  width: 1.4rem;
+}
+#main nav #themes #themes-select #themes-txt-area {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+#main nav #themes #themes-select input {
+  -webkit-appearance: none;
+  height: 0.5rem;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  padding: 8px 2px;
+}
+#main nav #themes #themes-select input::-moz-range-thumb, #main nav #themes #themes-select input::-webkit-slider-thumb {
+  border: none;
+  width: 12px;
+  height: 12px;
+}
+#main #display-area {
+  text-align: right;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+}
+#main #cal-area {
+  padding: 0.8rem;
+  display: grid;
+  gap: 0.4rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+#main #cal-area .buttons {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.2rem;
+}
+#main #cal-area .colorBtn {
+  font-size: 0.6rem;
+}
+#main #cal-area #reset {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#main #cal-area #result {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  font-size: 11px;
+}/*# sourceMappingURL=styles.css.map */
