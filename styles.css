@@ -225,4 +225,23 @@ body {
 
 .attribution a {
   font-size: 11px;
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 38px;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #main {
+    width: 80%;
+    min-width: 90vw;
+    margin: 0;
+  }
+  #main > div {
+    margin-bottom: 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
